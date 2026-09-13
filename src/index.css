@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --color-navy: #0b1030;
+  --color-panel: #141a3d;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #0b1030;
+  color: #f4f2ff;
+  font-family: var(--font-display);
+  overflow-x: hidden;
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0,0,0,0.18) 2px 4px);
+  mix-blend-mode: multiply;
+}
+
+.vinyl-spin { animation: spin 9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.float-slow { animation: floaty 7s ease-in-out infinite; }
+.float-med { animation: floaty 5s ease-in-out infinite; }
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-18px) rotate(3deg); }
+}
+
+.neon-grid {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 47, 179, 0.25) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to top, black 30%, transparent 90%);
+}
+
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+input[type="range"] { accent-color: #22d3ee; }
