@@ -227,7 +227,7 @@ export function PlayerPage() {
           </div>
           <div className="mt-3 flex flex-wrap gap-2 text-sm">
             <span className="py-2 text-slate-300">Instrument:</span>
-            {(['piano', 'guitar', 'synth', 'strings'] as InstrumentId[]).map((i) => (
+            {(['piano', 'guitar'] as InstrumentId[]).map((i) => (
               <button key={i} onClick={() => playerRef.current?.setInstrument(i)} className={btn(ps?.instrument === i)}>{i}</button>
             ))}
             <span className="py-2 pl-4 text-slate-300">Arrangement:</span>

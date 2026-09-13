@@ -2,7 +2,7 @@ export type Era = 'traditional' | '70s-inspired' | '80s-inspired' | '90s-inspire
 export type Mood = 'happy' | 'calm' | 'dramatic' | 'nostalgic';
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
 export type LicenseKind = 'original' | 'public-domain' | 'cc';
-export type InstrumentId = 'piano' | 'guitar' | 'synth' | 'strings';
+export type InstrumentId = 'piano' | 'guitar';
 export type DrumPattern = 'none' | 'four-floor' | 'disco' | 'boom-bap' | 'waltz' | 'folk-strum';
 
 export interface ChordEvent {

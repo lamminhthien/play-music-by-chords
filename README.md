@@ -19,7 +19,7 @@ npm run build    # typecheck + production build
 - **Library** (`src/pages/Library.tsx`) — 10 original songs as colorful cards with
   filters (mood, instrument, difficulty, era, license) + instant audio preview.
 - **Player** (`src/pages/PlayerPage.tsx`) — Tone.js transport engine with play/pause/
-  stop/restart, tempo, volume, loop, metronome, 4 instruments, transpose ±6,
+  stop/restart, tempo, volume, loop, metronome, 2 instruments (piano, guitar), transpose ±6,
   chords/melody/full arrangement, chord timeline + inspector (roman numerals,
   keyboard diagram, guitar hints, fingering), virtual piano + computer keys,
   Web MIDI input with fallback message, and 5 modes:

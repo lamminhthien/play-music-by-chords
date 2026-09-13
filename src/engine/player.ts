@@ -87,12 +87,8 @@ export class SongPlayer {
 
   private synthOptions(inst: InstrumentId) {
     switch (inst) {
-      case 'synth':
-        return { oscillator: { type: 'sawtooth' as const }, envelope: { attack: 0.03, decay: 0.25, sustain: 0.5, release: 0.6 } };
       case 'guitar':
         return { oscillator: { type: 'triangle' as const }, envelope: { attack: 0.005, decay: 0.4, sustain: 0.25, release: 0.5 } };
-      case 'strings':
-        return { oscillator: { type: 'sawtooth' as const }, envelope: { attack: 0.4, decay: 0.4, sustain: 0.8, release: 1.2 } };
       case 'piano':
       default:
         return { oscillator: { type: 'triangle' as const }, envelope: { attack: 0.002, decay: 0.5, sustain: 0.3, release: 1.0 } };
@@ -232,7 +228,7 @@ export class SongPlayer {
     });
 
     if (playMelody) {
-      const vel = this.state.instrument === 'strings' ? 0.5 : 0.65;
+      const vel = 0.65;
       for (const m of this.song.melody) {
         const note = transposeNote(m.note, transpose);
         const len = m.beats * spb;

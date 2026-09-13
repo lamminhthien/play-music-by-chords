@@ -77,8 +77,6 @@ export function Library() {
           <option value="">All instruments</option>
           <option value="piano">Piano</option>
           <option value="guitar">Guitar</option>
-          <option value="synth">Synth</option>
-          <option value="strings">Strings</option>
         </select>
         <select className={select} value={difficulty} onChange={(e) => setDifficulty(e.target.value as Difficulty | '')} aria-label="Filter by difficulty">
           <option value="">All levels</option>
